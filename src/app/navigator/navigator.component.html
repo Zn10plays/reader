@@ -1,0 +1,53 @@
+<div class="h-screen">
+  <mat-drawer-container class="h-full">
+    <!-- App Overlay navbar for smaller screens -->
+    <mat-drawer #drawer>
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <button mat-icon-button> <mat-icon>badge</mat-icon> </button> Admin
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <button mat-icon-button> <mat-icon> books </mat-icon> </button> Bookshelf
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <button mat-icon-button> <mat-icon> storage </mat-icon> </button> Library
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <button mat-icon-button> <mat-icon>person</mat-icon> </button> User
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </mat-drawer>
+    <mat-drawer-content>
+      <!-- App Navbar -->
+      <mat-toolbar color="primary">
+        <mat-toolbar-row class="container mx-auto">
+          <mat-icon class="mx-2">book</mat-icon>
+          <span>Reader</span>
+          <span class="flex-auto"></span>
+      
+          <button mat-icon-button class="block md:hidden" (click)="drawer.open()"> 
+            <mat-icon>menu</mat-icon>  
+          </button>
+          
+          <ul class="flex flex-wrap">
+            <li class="invisible hidden md:block">
+              <button mat-button> Admin </button>
+            </li>
+            <li class="hidden md:block">
+              <button mat-button> Bookshelf </button>
+            </li>
+            <li class="hidden md:block">
+              <button mat-button> Library </button>
+            </li>
+            <li class="hidden md:block">
+              <button mat-icon-button> 
+                <mat-icon> person </mat-icon>  
+              </button>
+            </li>
+          </ul>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-container>
+</div>
