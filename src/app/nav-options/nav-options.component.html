@@ -1,0 +1,22 @@
+<ul [ngClass]="[!vertical &&  'hidden', !vertical && 'md:flex', 'text-center']">
+  <li>
+    <button mat-button>
+      Admin
+    </button>
+  </li>
+  <li>
+    <button mat-button>
+      Bookshelf
+    </button>
+  </li>
+  <li>
+    <button mat-button>
+      Catalogue
+    </button>
+  </li>
+  <li>
+  </li>
+</ul>
+<button mat-icon-button [class]="vertical  ? '!hidden' : 'md:!hidden'" (click)="toggleNav()">
+  <mat-icon> menu </mat-icon>
+</button>
