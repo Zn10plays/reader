@@ -1,19 +1,20 @@
 <div class="h-screen mat-app-background">
   <mat-drawer-container class="h-full" >
-    <mat-drawer #drawer mode="side">
+    <mat-drawer #drawer>
       <app-nav-options [vertical]="true"></app-nav-options>
     </mat-drawer>
     <mat-drawer-content>
       <mat-toolbar color="primary">
         <mat-toolbar-row class="container mx-auto">
-          <button mat-icon-button>
-            <mat-icon>book</mat-icon>
-            Reader
-          </button>
+          <div class="flex items-center">
+            <img src="/assets/logo.png" alt="logo" width="40" class="mr-2">
+            <h4> Reader </h4>
+          </div>
           <span class="flex-1"></span>
           <app-nav-options #opt></app-nav-options>
         </mat-toolbar-row>
       </mat-toolbar>
+      <router-outlet></router-outlet>
     </mat-drawer-content>
   </mat-drawer-container>
 </div>

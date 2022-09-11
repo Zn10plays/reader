@@ -14,11 +14,13 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { NavOptionsComponent } from './nav-options/nav-options.component';
+import { HomeBodyComponent } from './home-body/home-body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavOptionsComponent,
+    HomeBodyComponent,
   ],
   imports: [
     BrowserModule,
