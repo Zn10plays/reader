@@ -7,10 +7,10 @@
       <div>
         <ul>
           <li>
-            Bookmarks and progress are never deleted, you will never lose your place.
+            A place to store all of your books
           </li>
           <li>
-            Everything is hosted on the cloud with the help of firebase.
+           It goes where you go
           </li>
           <li>
             Fully opensource, go checkout github to find out more.
@@ -18,7 +18,7 @@
         </ul>
         <hr>
       </div>
-      <div class="mt-2 text-center md:text-right">
+      <div class="mt-2 text-center md:text-left">
         <h3><span class="text-amber-600">Authentication</span> is Require Please </h3>
         <button mat-raised-button color="primary"> Login </button>
       </div>
@@ -27,9 +27,14 @@
       <img src="assets/logo.png" alt="" class="lg:max-w-lg max-w-sm">
     </div>
   </div>
-  <div class="h-80 border-2 p-2">
-    <h1>
-
+  <div class="h-80 p-2 mt-2">
+    <h1 class="underline">
+      Quick Access
     </h1>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 content-center">
+      <app-book-display></app-book-display>
+      <app-book-display></app-book-display>
+      <app-book-display></app-book-display>
+    </div>
   </div>
 </div>

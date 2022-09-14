@@ -15,27 +15,31 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { NavOptionsComponent } from './nav-options/nav-options.component';
 import { HomeBodyComponent } from './home-body/home-body.component';
+import { BookDisplayComponent } from './books/book-display/book-display.component';
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavOptionsComponent,
     HomeBodyComponent,
+    BookDisplayComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    MatSidenavModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatAutocompleteModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        MatSidenavModule,
+        MatProgressBarModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
