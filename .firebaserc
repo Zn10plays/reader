@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "reader-1eeb7"
+  },
+  "targets": {
+    "reader-1eeb7": {
+      "hosting": {
+        "reader": [
+          "reader-1eeb7"
+        ]
+      }
+    }
+  }
+}

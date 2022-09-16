@@ -14,8 +14,8 @@ export class AppComponent implements AfterViewInit {
   title = 'reader';
 
   ngAfterViewInit() {
-    // this.options.control.subscribe(() => {
-    //   this.drawer.toggle()
-    // })
+    this.options.control.subscribe(() => {
+      this.drawer.toggle()
+    })
   }
 }
