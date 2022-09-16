@@ -1,0 +1,34 @@
+<div class="container mx-auto flex justify-center mt-6">
+  <form class="login-form" autocomplete="off" [formGroup]="control" (submit)="handleSubmit()">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Login
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <mat-form-field appearance="outline" class="w-full">
+            <mat-label> Email </mat-label>
+            <input matInput formControlName="email">
+            <mat-error *ngIf="control.controls['email'].hasError('email')"> Must be in valid email format </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline" class="w-full">
+            <mat-label> Password </mat-label>
+            <input matInput formControlName="password">
+          </mat-form-field>
+        </div>
+        <hr>
+      </mat-card-content>
+      <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary" class="w-full">Login</button>
+        <button mat-flat-button class="w-full"> Register </button>
+        <span class="underline text-fuchsia-800">
+          Forgot Password?
+        </span>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

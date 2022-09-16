@@ -17,6 +17,10 @@ import { NavOptionsComponent } from './nav-options/nav-options.component';
 import { HomeBodyComponent } from './home-body/home-body.component';
 import { BookDisplayComponent } from './books/book-display/book-display.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
+import { LoginComponent } from './login/login.component';
+import {MatCardModule} from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -24,21 +28,25 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
     NavOptionsComponent,
     HomeBodyComponent,
     BookDisplayComponent,
+    LoginComponent,
   ],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatAutocompleteModule,
-        ReactiveFormsModule,
-        MatDialogModule,
-        MatSidenavModule,
-        MatProgressBarModule
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      MatToolbarModule,
+      MatIconModule,
+      MatButtonModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatAutocompleteModule,
+      ReactiveFormsModule,
+      MatDialogModule,
+      MatSidenavModule,
+      MatProgressBarModule,
+      MatCardModule,
+      MatSelectModule,
+      MatRadioModule
     ],
   providers: [],
   bootstrap: [AppComponent]
