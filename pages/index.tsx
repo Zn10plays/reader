@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Box from "@mui/material/Box";
+import LoginForm from "@/components/Login/LoginForm";
 
 export default function Home() {
   return (
@@ -10,8 +11,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box component={'main'}>
-        
+      <Box component={'main'} sx={{height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <LoginForm/>
       </Box>
     </>
   )
