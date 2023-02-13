@@ -17,12 +17,6 @@ interface LoginFormProps {
 	onCancel?: () => void;
 }
 
-function GoogleIcon() {
-	return <Icon sx={{lineHeight: '0'}}>
-		<Image src={'/google.svg'} alt={'google icon'} width={18} height={18} />
-	</Icon>
-}
-
 export default function LoginForm(props: LoginFormProps): JSX.Element {
 
 	const [email, setEmail] = useState('');
@@ -55,16 +49,12 @@ export default function LoginForm(props: LoginFormProps): JSX.Element {
 		<Typography variant='h5' component='div' sx={{textAlign: 'center', my: 1}}>
 			Login
 		</Typography>
-		<Box>
-			<Button startIcon={<GoogleIcon/>} fullWidth variant='outlined' onClick={handleSignInWithGoogle}>Google</Button>
-		</Box>
-		<Divider sx={{my: 1, fontFamily: 'monospace'}}> OR </Divider>
+		<Divider sx={{my: 1}}/>
 		<Box component={'form'}>
 			<TextField
 				label='Email'
 				type='email'
 				variant='outlined'
-				placeholder='example@email.com'
 				fullWidth
 				value={email}
 				onChange={e => {setEmail(e.target.value)}}
@@ -76,7 +66,6 @@ export default function LoginForm(props: LoginFormProps): JSX.Element {
 				label='Password'
 				type='password'
 				variant='outlined'
-				placeholder='HelloMonkey'
 				fullWidth
 				value={pass}
 				onChange={e => {setPass(e.target.value)}}
