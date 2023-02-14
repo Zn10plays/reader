@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import {User} from "@firebase/auth";
+import {updateProfile, User} from "@firebase/auth";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Divider from "@mui/material/Divider";
@@ -9,6 +9,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import {useState} from "react";
 import {auth} from "@/firebase/firebase";
+import Link from "next/link";
 
 interface UserDetailsProps {
 	user: User;
@@ -17,10 +18,17 @@ interface UserDetailsProps {
 export default function UserDetails(props: UserDetailsProps) {
 	const { user } = props;
 	const [userName, setUsername] = useState(user.displayName);
+	const [isButtonDisabled, setButtonDisable] = useState<boolean>(true)
 
 	const updateUsername = () => {
 		if (!auth.currentUser) return;
 
+		updateProfile(auth.currentUser, {
+			displayName: userName,
+		})
+			.then(() => {
+				setButtonDisable(true);
+			})
 	};
 
 	return <Paper sx={{maxWidth: '500px', width: '100%', p: 2}}>
@@ -34,7 +42,10 @@ export default function UserDetails(props: UserDetailsProps) {
 					sx={{flex: '1 1'}}
 					variant={'standard'}
 					label={'Display Name'}
-					onChange={(event) => setUsername(event.target.value)}
+					onChange={(event) => {
+						setUsername(event.target.value)
+						if (isButtonDisabled) setButtonDisable(false)
+					}}
 					defaultValue={userName}
 					autoComplete={'off'} />
 			</Box>
@@ -61,7 +72,7 @@ export default function UserDetails(props: UserDetailsProps) {
 					Update
 				</Button>
 				<Box sx={{flex: '1 1'}}/>
-				<Button variant={'contained'}>
+				<Button variant={'contained'} component={Link} href={'/dash'}>
 					Dashboard
 				</Button>
 			</Box>

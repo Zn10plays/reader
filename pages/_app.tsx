@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }), [])
 
   return <ThemeProvider theme={darkTheme}>
-    <Box sx={{height: '100vh', bgcolor: 'background.default'}}>
+    <Box sx={{height: '100vh', bgcolor: 'background.default', color: 'text.primary'}}>
       <Component {...pageProps} />
     </Box>
   </ThemeProvider>
