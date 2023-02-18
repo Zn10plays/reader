@@ -1,4 +1,4 @@
-interface Book {
+interface BookData {
 	name: string
 	author: string
 	source: string
@@ -6,12 +6,12 @@ interface Book {
 	initialRating: number
 }
 
-interface BookStatus extends Book {
-	currentRating: number
-	currentChapters: number
+interface CurrentBookStatus extends BookData {
+	Rating: number
+	Chapters: number
 }
 
 export type {
-	Book,
-	BookStatus
+	BookData,
+	CurrentBookStatus
 }
